@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.a617e044.chunk.css",
-    "main.js": "/static/js/main.affb32de.chunk.js",
-    "main.js.map": "/static/js/main.affb32de.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.82212472.js",
-    "runtime-main.js.map": "/static/js/runtime-main.82212472.js.map",
-    "static/js/2.89373a61.chunk.js": "/static/js/2.89373a61.chunk.js",
-    "static/js/2.89373a61.chunk.js.map": "/static/js/2.89373a61.chunk.js.map",
-    "static/js/3.a3fa7b87.chunk.js": "/static/js/3.a3fa7b87.chunk.js",
-    "static/js/3.a3fa7b87.chunk.js.map": "/static/js/3.a3fa7b87.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.89373a61.chunk.js.LICENSE.txt": "/static/js/2.89373a61.chunk.js.LICENSE.txt"
+    "main.css": "/client/static/css/main.b9eeea40.chunk.css",
+    "main.js": "/client/static/js/main.c0c83add.chunk.js",
+    "main.js.map": "/client/static/js/main.c0c83add.chunk.js.map",
+    "runtime-main.js": "/client/static/js/runtime-main.f67b6dda.js",
+    "runtime-main.js.map": "/client/static/js/runtime-main.f67b6dda.js.map",
+    "static/js/2.38467074.chunk.js": "/client/static/js/2.38467074.chunk.js",
+    "static/js/2.38467074.chunk.js.map": "/client/static/js/2.38467074.chunk.js.map",
+    "static/js/3.a5e13b3d.chunk.js": "/client/static/js/3.a5e13b3d.chunk.js",
+    "static/js/3.a5e13b3d.chunk.js.map": "/client/static/js/3.a5e13b3d.chunk.js.map",
+    "index.html": "/client/index.html",
+    "static/css/main.b9eeea40.chunk.css.map": "/client/static/css/main.b9eeea40.chunk.css.map",
+    "static/js/2.38467074.chunk.js.LICENSE.txt": "/client/static/js/2.38467074.chunk.js.LICENSE.txt",
+    "static/media/ash.a6d6a164.png": "/client/static/media/ash.a6d6a164.png",
+    "static/media/charmander.5bc6e242.png": "/client/static/media/charmander.5bc6e242.png",
+    "static/media/loupe.c6544d31.png": "/client/static/media/loupe.c6544d31.png",
+    "static/media/title.9631a0e0.png": "/client/static/media/title.9631a0e0.png",
+    "static/media/Home.module.css": "/client/static/media/wallpaper.1b4d5ae8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.82212472.js",
-    "static/js/2.89373a61.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.affb32de.chunk.js"
+    "static/js/runtime-main.f67b6dda.js",
+    "static/js/2.38467074.chunk.js",
+    "static/css/main.b9eeea40.chunk.css",
+    "static/js/main.c0c83add.chunk.js"
   ]
 }
