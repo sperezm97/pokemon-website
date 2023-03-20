@@ -3,7 +3,9 @@ import axios from "axios";
 export const GET_POKEMONS = "GET_POKEMONS";
 export const getAllPokemon = () => {
   return async function (dispatch) {
-    const apiData = await axios.get("http://localhost:3001/pokemons");
+    const apiData = await axios.get(
+      "https://pokemon-backend-6ohr.onrender.com/pokemons"
+    );
     return dispatch({ type: GET_POKEMONS, payload: apiData.data[0] });
   };
 };
@@ -11,7 +13,9 @@ export const getAllPokemon = () => {
 export const GET_POKEMON = "GET_POKEMON";
 export const getPokemon = (id) => {
   return async function (dispatch) {
-    const apiData = await axios.get(`http://localhost:3001/pokemons/${id}`);
+    const apiData = await axios.get(
+      `https://pokemon-backend-6ohr.onrender.com/pokemons/${id}`
+    );
     return dispatch({ type: GET_POKEMON, payload: apiData.data });
   };
 };
@@ -19,7 +23,9 @@ export const getPokemon = (id) => {
 export const GET_TYPES = "GET_TYPES";
 export const getTypes = () => {
   return async function (dispatch) {
-    const apiDataTypes = await axios.get("http://localhost:3001/types");
+    const apiDataTypes = await axios.get(
+      "https://pokemon-backend-6ohr.onrender.com/types"
+    );
     const types = apiDataTypes.data;
 
     dispatch({ type: GET_TYPES, payload: types });
@@ -34,7 +40,9 @@ export const setFilteredPokemons = (filteredPokemons) => ({
 
 export const FILTER_BY_TYPE = "FILTER_BY_TYPE";
 export const getFilterType = (type) => async (dispatch) => {
-  const apiDataTypes = await axios.get("http://localhost:3001/pokemons");
+  const apiDataTypes = await axios.get(
+    "https://pokemon-backend-6ohr.onrender.com/pokemons"
+  );
   const data = apiDataTypes.data[0];
   const response = data?.filter((e) => e.type?.includes(type));
   if (response) {
@@ -71,7 +79,9 @@ export const GET_NAME = "GET_NAME";
 export const getPokemonByName = (name) => {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3001/pokemons/`);
+      const response = await axios.get(
+        `https://pokemon-backend-6ohr.onrender.com/pokemons`
+      );
       const apiDataTypes = response.data[0];
       const pokeFilter = apiDataTypes.filter((e) =>
         e.name.toLowerCase().includes(name.toLowerCase())
