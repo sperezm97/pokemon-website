@@ -10,7 +10,6 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 const Home = () => {
   const { pokemons } = useSelector((state) => state);
   const dispatch = useDispatch();
-
   const [page, setPage] = useState(1);
   const [perPage] = useState(12);
   const max = pokemons.length / perPage;
