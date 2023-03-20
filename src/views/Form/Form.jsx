@@ -120,7 +120,7 @@ const Form = () => {
       alert("Please complete all the fields correctly.");
     } else {
       axios
-        .post("http://localhost:3001/pokemons", formValues)
+        .post("https://pokemon-backend-6ohr.onrender.com/pokemons", formValues)
         .then((res) => alert("Pokemon has been created"))
         .catch((err) => alert(err));
       navigate("/home");
