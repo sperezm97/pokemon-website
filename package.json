@@ -1,8 +1,8 @@
 {
-  "name": "client",
+  "name": "pokemon-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://CristopherAreche.github.io/client",
+  "homepage": "http://CristopherAreche.github.io/pokemon-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
