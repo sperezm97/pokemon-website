@@ -1,5 +1,5 @@
 input {
-  width: 45em;
+  width: 40em;
   height: 3em;
   border-radius: 20px;
   border-style: none;
@@ -7,8 +7,34 @@ input {
   box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
   padding-left: 1.5em;
 }
+.searchButton {
+  width: 8em;
+  height: 3em;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  margin-left: 1em;
+  background-color: rgb(151, 203, 98);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.searchButton:hover {
+  background-color: rgb(94, 123, 65);
+}
 @media (max-width: 621px) {
   input {
-    width: 90%;
+    width: 160%;
+  }
+}
+@media (max-width: 777px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    margin-bottom: 0.5em;
   }
 }

@@ -28,15 +28,17 @@ const SearchBar = () => {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <input
         className={styles.input}
         placeholder="Search..."
         value={searchTerm}
         onChange={handleChange}
       />
-      <button onClick={handleKeyPress}>Search</button>
-    </>
+      <button className={styles.searchButton} onClick={handleKeyPress}>
+        Search
+      </button>
+    </div>
   );
 };
 

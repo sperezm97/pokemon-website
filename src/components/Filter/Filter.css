@@ -93,3 +93,8 @@
     width: 100%;
   }
 }
+@media (max-width: 516px) {
+  .filter {
+    margin-top: 1em;
+  }
+}
