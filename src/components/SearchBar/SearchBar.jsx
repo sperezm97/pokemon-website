@@ -15,26 +15,28 @@ const SearchBar = () => {
   };
 
   const handleSearch = (event) => {
-    console.log("en el search bar --", event);
     dispatch(getPokemonByName(event));
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      if (searchTerm.length !== 0) {
-        handleSearch(searchTerm);
-      } else dispatch(getAllPokemon());
+  const handleKeyPress = () => {
+    console.log();
+    if (searchTerm.length !== 0) {
+      handleSearch(searchTerm);
+    } else {
+      dispatch(getAllPokemon());
     }
   };
 
   return (
-    <input
-      className={styles.input}
-      placeholder="Search..."
-      value={searchTerm}
-      onChange={handleChange}
-      onKeyPress={handleKeyPress}
-    />
+    <>
+      <input
+        className={styles.input}
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleChange}
+      />
+      <button onClick={handleKeyPress}>Search</button>
+    </>
   );
 };
 

@@ -8,15 +8,20 @@ import Pagination from "../../components/Pagination/Pagination";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Home = () => {
-  const { pokemons } = useSelector((state) => state);
+  const { pokemons, length } = useSelector((state) => state);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [perPage] = useState(12);
-  const max = pokemons.length / perPage;
 
   useEffect(() => {
     dispatch(getAllPokemon());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (length !== 0) {
+      setPage(1);
+    }
+  }, [length]);
 
   return (
     <div className={styles.body}>
@@ -46,7 +51,13 @@ const Home = () => {
         </section>
       </main>
       <footer className={styles.footer}>
-        <Pagination page={page} setPage={setPage} max={max} />
+        <Pagination
+          page={page}
+          setPage={setPage}
+          pokemons={pokemons}
+          length={length}
+          perPage={perPage}
+        />
       </footer>
     </div>
   );

@@ -12,6 +12,7 @@ const initialState = {
   pokemons: [],
   pokemon: {},
   types: [],
+  length: 0,
 };
 //es una funcion que sabe que hacer en el estado global
 const rootReducer = (state = initialState, action) => {
@@ -64,7 +65,8 @@ const rootReducer = (state = initialState, action) => {
     case GET_NAME:
       return {
         ...state,
-        pokemons: action.payload,
+        pokemons: action.payload.pokeFilter,
+        length: action.payload.length,
       };
     default:
       return { ...state };

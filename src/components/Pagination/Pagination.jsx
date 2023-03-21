@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Pagination.module.css";
 
-const Pagination = ({ page, setPage, max }) => {
+const Pagination = ({ page, setPage, pokemons, perPage, length }) => {
   const [input, setInput] = useState(1);
+  const max = length === 0 ? pokemons.length / perPage : length / perPage;
+
+  useEffect(() => {
+    setInput(1);
+  }, [length]);
 
   const nextPage = () => {
     setInput(parseInt(input) + 1);

@@ -43,7 +43,7 @@ export const getFilterType = (type) => async (dispatch) => {
   const apiDataTypes = await axios.get(
     "https://pokemon-backend-6ohr.onrender.com/pokemons"
   );
-  const data = apiDataTypes.data[0];
+  const data = apiDataTypes.data;
   const response = data?.filter((e) => e.type?.includes(type));
   if (response) {
     return dispatch({
@@ -82,14 +82,17 @@ export const getPokemonByName = (name) => {
       const response = await axios.get(
         `https://pokemon-backend-6ohr.onrender.com/pokemons`
       );
-      const apiDataTypes = response.data[0];
+      const apiDataTypes = response.data;
       const pokeFilter = apiDataTypes.filter((e) =>
         e.name.toLowerCase().includes(name.toLowerCase())
       );
       if (!pokeFilter.length) {
         alert("Pokemon not found");
       } else {
-        dispatch({ type: GET_NAME, payload: pokeFilter });
+        dispatch({
+          type: GET_NAME,
+          payload: { pokeFilter, length: pokeFilter.length },
+        });
       }
     } catch (error) {
       console.log(error);
