@@ -6,7 +6,7 @@ export const getAllPokemon = () => {
     const apiData = await axios.get(
       "https://pokemon-backend-6ohr.onrender.com/pokemons"
     );
-    return dispatch({ type: GET_POKEMONS, payload: apiData.data[0] });
+    return dispatch({ type: GET_POKEMONS, payload: apiData.data });
   };
 };
 
