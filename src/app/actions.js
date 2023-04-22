@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from "sweetalert";
 
 export const GET_POKEMONS = "GET_POKEMONS";
 export const getAllPokemon = () => {
@@ -87,7 +88,7 @@ export const getPokemonByName = (name) => {
         e.name.toLowerCase().includes(name.toLowerCase())
       );
       if (!pokeFilter.length) {
-        alert("Pokemon not found");
+        swal("Pokemon not found");
       } else {
         dispatch({
           type: GET_NAME,

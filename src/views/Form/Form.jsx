@@ -5,6 +5,7 @@ import { background } from "../../assets/backgroundColorByType.js";
 import axios from "axios";
 import noImg from "../../images/charmander.png";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const Form = () => {
   const initialValues = {
@@ -117,12 +118,16 @@ const Form = () => {
     e.preventDefault();
     //genera un array con las llaves del objeto fomrErrors
     if (Object.keys(formErrors).length > 0) {
-      alert("Please complete all the fields correctly.");
+      swal("Please complete all the fields correctly.");
     } else {
       axios
         .post("https://pokemon-backend-6ohr.onrender.com/pokemons", formValues)
-        .then((res) => alert("Pokemon has been created"))
-        .catch((err) => alert(err));
+        .then((res) => swal("Pokemon has been created successfully"))
+        .catch((err) =>
+          swal(
+            "Pokemon could not be created. There might be something wrong with the server."
+          )
+        );
       navigate("/home");
     }
   };
